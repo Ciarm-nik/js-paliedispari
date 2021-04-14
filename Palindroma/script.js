@@ -37,7 +37,7 @@ function InvertiParola(str) {
     return strInversa;
 }
 
-
+ 
 
 
 
