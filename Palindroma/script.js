@@ -4,25 +4,40 @@
 var inserisciParola = prompt("Inserisci una parola!!!")
 
 // Applico il metodo split per suddividere il testo in sottostringhe
-var parolaDivisa = inserisciParola.split("");
+// var parolaDivisa = inserisciParola.split("");
 // console.log(parolaDivisa);
 
 // Utilizzo il metodo reverse per invertire l'array
-var parolaDivisa = parolaDivisa.reverse();
+// var parolaDivisa = parolaDivisa.reverse();
 // console.log(parolaDivisa);
 
 // Riunisco le lettere per ottenere di nuovo una stringa con join
-var parolaInvertita = parolaDivisa.join("");
-console.log(parolaInvertita);
+// var parolaInvertita = parolaDivisa.join("");
+// console.log(parolaInvertita);
 
 // Uso il condizionale per capire se quella parola è palindroma
-if (inserisciParola == parolaInvertita) {
-    console.log("la parola è palindroma");
+// if (inserisciParola == parolaInvertita) {
+//     console.log("la parola è palindroma");
+// } else {
+//     console.log("la parola non è palindroma")
+// }
+
+// Creare una funzione per capire se la parola inserita è palindroma (split,reverse,join)
+
+var parolaInversa = InvertiParola(inserisciParola);
+
+if (inserisciParola == parolaInversa) {
+    console.log("La parola è palindroma");
 } else {
-    console.log("la parola non è palindroma")
+    console.log("La parola non è palindroma");
 }
 
-// Creare una funzione per capire se la parola inserita è palindroma
+function InvertiParola(str) {
+    var strInversa = str.split("").reverse().join("");
+    return strInversa;
+}
+
+
 
 
 
